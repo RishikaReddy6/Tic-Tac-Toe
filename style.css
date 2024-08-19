@@ -1,0 +1,81 @@
+* {       /*it's a better practice to do this to avoid default props */
+    margin: 0;   
+    padding: 0;
+}
+
+body {
+    background-color: #E96E8B;   /*check coolors for color pallette*/
+    text-align: center;  /*all the content inside body to the center*/
+}
+.container {
+    height: 70vh; /*viewport height (dynamic responsive). whatever the size of screen that is visible, 70% of it should be of this container*/
+    display: flex; /*this creates a flex container: its content in it becomes flex items, flex allows you to easily control their alignment, direction, and spacing of its child elements.*/
+    justify-content: center; 
+    /* It controls the alignment of flex items when they do not take up 
+    all the available space along the main axis. */
+    align-items: center; 
+    /*(along cross axis prpndclr to main)the 3 items(h1,boxes,resetBtn) have equal dist b/w them*/
+} 
+
+.game {
+    height: 60vmin; /*1% of viewport's smaller dimension = so here, it is 60% */
+    width: 60vmin; 
+    display: flex; /*boxes in a single line*/
+    flex-wrap: wrap;  /*go to next line if there isnt enough space*/
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin; 
+}  
+
+.box {
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 1rem; /*curved borders*/
+    border: none;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.5); last: opacity;
+    font-size: 8vmin; /*font: X,O */
+    color: #b0413e;
+    background-color: #ffffc7;
+}
+
+#reset {
+    padding: 1rem; /*rem=16px by default. root em unit. */
+    font-size: 1rem;
+    margin: 5px;  /*gap b/w boxes and button*/
+    background-color: rgb(12, 8, 2);
+    color: white;
+    border-radius: 1rem;
+    border: none;
+}
+
+#newGame {
+    padding: 1rem; 
+    font-size: 1rem;
+    margin: 5px;
+    background-color: rgb(12, 8, 2);
+    color: white;
+    border-radius: 1rem;
+    border: none;
+}
+
+#msg {
+    color: #ffffc7;
+    font-size: 8vmin;
+}
+
+.msg-container {
+    height: 100vmin; 
+    display: flex;
+    justify-content: center; 
+    /*moves content to center*/
+    align-items: center; 
+    /*now align the ele to center of height-container- balancing flex */
+    flex-direction: column; 
+    /*arrange ele in a column*/
+    gap: 4rem; 
+    /*gap b/w ele*/
+}
+.hide {
+    display: none; 
+    /*shouldn't show in the beginning */
+}
